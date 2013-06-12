@@ -24,7 +24,6 @@ public class Main {
 
 	public static boolean methodInClass(SootClass sc, String method){
 		if (sc!= null && sc.getName().compareTo("android.app.Activity") == 0){
-			sc.setResolvingLevel(10);
 			System.err.println("XXXXXXXXXXXXXXXXXXXXXXXXXXx " );
 			System.err.println("We are in "+sc.getName()+ "("+sc.getMethodCount() + ")");
 			for (SootMethod sm: sc.getMethods()) {
