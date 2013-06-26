@@ -4,7 +4,8 @@ ANDROID_JARS_PATH="/android/jars/"
 export JAVA_CLASSPATH="\
 /android/SOOT/soot-github/lib/soot-develop.jar:\
 /android/SOOT/soot-github/libs/AXMLPrinter2.jar:\
-/android/workspace/Soot/bin:\
+/android/workspace/Soot/lib/mysql-connector-java-5.1.25-bin.jar:\
+/android/andromine/andromine.jar:\
 "
 APK_FILE=$1
 SOOT_OUT_DIR=$2
@@ -19,6 +20,7 @@ SOOT_CMD="andromine.soot.Main --soot-classpath $SOOT_CLASSPATH \
  -allow-phantom-refs \
  -src-prec apk \
  -ire \
+ -pp \
  -f J\
  -w \
  -full-resolver \
